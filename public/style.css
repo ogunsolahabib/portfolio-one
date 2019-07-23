@@ -5,12 +5,12 @@ body {
   font-family: "Secular One", sans-serif;
   background: #12171d;
   color: #fff;
-  font-size: 1.2vw;
+  font-size: 1vw;
   max-height: 100vh;
   overflow: hidden;
 }
 .brand-logo h1 {
-  color: #f8d59f;
+  color: #97b1a5;
   font-size: 50px;
   vertical-align: middle;
   text-align: center;
@@ -53,6 +53,7 @@ nav ul li a {
 }
 .name-large {
   font-size: 80px;
+  line-height: 1em;
 }
 .matter {
   margin: 1em 10em;
@@ -62,8 +63,9 @@ nav ul li a {
   display: grid;
   grid-template-columns: 10fr 2fr;
 }
+
 .large-text {
-  padding: 10px;
+  padding: 0.5em 5em;
 }
 .large-text #about {
   text-align: center;
@@ -75,15 +77,13 @@ nav ul li a {
 .arrow-circle {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
-  border: 2px solid #97b1a5;
   color: #97b1a5;
-  font-size: 40px;
+  font-size: 4vw;
   text-align: center;
   padding: 5px;
   position: absolute;
   top: 50%;
-  animation: blink 2s infinite;
+  animation: blink 0.5s infinite;
 }
 @keyframes blink {
   0% {
@@ -151,6 +151,9 @@ nav ul li a {
   font-size: 1.5vw;
   border: none;
 }
+.btn-arrow:focus {
+  border: none;
+}
 .arrow i {
   text-align: center;
 }
@@ -160,6 +163,7 @@ nav ul li a {
   grid-template-columns: 40% 60%;
   grid-column-gap: 3em;
   padding: 0.5em 3em;
+  margin-top: 5vh;
 }
 .work img {
   width: 100%;
@@ -175,9 +179,11 @@ nav ul li a {
 .btn-group {
   width: 60%;
   margin: 0 auto;
+  margin-top: auto;
 }
 .btn-group > * {
   display: inline-block;
+  margin: 1em 0.5em;
 }
 
 footer {
