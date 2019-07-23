@@ -141,7 +141,6 @@ nav ul li a {
   grid-template-columns: 10% 80% 10%;
   grid-gap: 1em;
   padding: 0 3em;
-  padding-top: 0;
 }
 .left-arrow,
 .right-arrow {
