@@ -125,6 +125,7 @@ nav ul li a {
   font-family: inherit;
   cursor: pointer;
   color: #97b1a5;
+  outline: none;
 }
 
 .btn:hover {
