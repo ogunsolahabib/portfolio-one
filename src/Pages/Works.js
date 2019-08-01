@@ -29,7 +29,7 @@ class Works extends React.Component {
           name: "REST Countries",
           image: "img/REST_COUNTRIES.png",
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, deserunt tempore? Corporis praesentium voluptatum minus, accusantium quibusdam quo nihil necessitatibus.",
+            "I found a challenge online to build this. The web app shows information of 250 countries and has a light theme and dark theme. I built it using ReactJS and Semantic UI",
           repository: "https://github.com/ogunsolahabib/world-countries",
           liveWebsite: "https://ogunsolahabib.github.io/world-countries"
         },
@@ -37,7 +37,7 @@ class Works extends React.Component {
           name: "Books App",
           image: "img/BOOKS.png",
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, deserunt tempore? Corporis praesentium voluptatum minus, accusantium quibusdam quo nihil necessitatibus.",
+            "The Books App shows details of different programming books on backend languages. I used React and Semantic UI.",
           repository: "https://github.com/ogunsolahabib/books-app",
           liveWebsite: "https://ogunsolahabib.github.io/books-app"
         },
@@ -45,7 +45,7 @@ class Works extends React.Component {
           name: "Rosetta",
           image: "img/ROSETTA.png",
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, deserunt tempore? Corporis praesentium voluptatum minus, accusantium quibusdam quo nihil necessitatibus.",
+            "Here's an online platform that can be used to make monthly orders for meals and schedule them based on preference. Materialize CSS, FullCalendarJS were mainly used.",
           repository: "https://github.com/ogunsolahabib/rosetta",
           liveWebsite: "https://ogunsolahabib.github.io/rosetta"
         },
@@ -53,7 +53,7 @@ class Works extends React.Component {
           name: "Renvies",
           image: "img/RENVIES.png",
           description:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, deserunt tempore? Corporis praesentium voluptatum minus, accusantium quibusdam quo nihil necessitatibus.",
+            "Movie Rental Application that fetches movie data from the OMDB API. Axios is used as the HTTP server and Bootstrap was used for the User interface.",
           repository: "https://github.com/ogunsolahabib/renvies",
           liveWebsite: "https://ogunsolahabib.github.io/renvies"
         }
@@ -62,7 +62,7 @@ class Works extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="worksPage">
         <Header />
         <div className="matter">
           <div className="works">

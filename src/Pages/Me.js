@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Works from "./Works";
 import {Link} from "react-router-dom";
+
 const Me = props => {
   return (
-    <div>
+    <div className="mePage">
       <Header />
       <div className="matter">
         <div className="me">
@@ -23,16 +25,17 @@ const Me = props => {
               <div id="skills">
                 <h3>Skills</h3>
                 <ul>
-                  <div className="set">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                  </div>
-                  <div className="set">
-                    <li>MaterializeCSS</li>
-                    <li>Semantic-UI</li>
-                    <li>ReactJS</li>
-                  </div>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+
+                  <li>Materialize</li>
+                  <li>Semantic-UI</li>
+                  <li>ReactJS</li>
+
+                  <li>Git</li>
+                  <li>REST APIs</li>
+                  <li>Figma</li>
                 </ul>
               </div>
               <div id="contact">
@@ -46,13 +49,8 @@ const Me = props => {
                   </div>
                   <div className="v-line" />
                   <div className="set address">
-                    <li>08182141620</li>
+                    <li>+2348182141620</li>
                     <li>ogunsolahabib@yahoo.com</li>
-                    <li>
-                      <a href="#n">
-                        <button className="btn btn-primary">RESUME</button>
-                      </a>
-                    </li>
                   </div>
                 </ul>
               </div>
@@ -63,6 +61,9 @@ const Me = props => {
               <i className="fas fa-long-arrow-alt-right" />
             </Link>
           </div>
+        </div>
+        <div className="mobile-works">
+          <Works />
         </div>
       </div>
       <Footer />

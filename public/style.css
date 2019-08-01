@@ -1,13 +1,15 @@
 * {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 body {
   font-family: "Secular One", sans-serif;
   background: #12171d;
   color: #fff;
-  font-size: 1vw;
-  max-height: 100vh;
-  overflow: hidden;
+  font-size: 16px;
 }
 .brand-logo h1 {
   color: #97b1a5;
@@ -19,8 +21,11 @@ body {
 h1,
 h3 {
   color: #97b1a5;
+}
+h1 {
   text-align: center;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -31,7 +36,7 @@ li {
 }
 nav {
   display: grid;
-  grid-template-columns: 20% 70%;
+  grid-template-columns: 20% 60% 20%;
 }
 
 nav .nav-links {
@@ -43,6 +48,9 @@ nav .nav-links {
 .nav-links .active {
   border-bottom: 5px solid #97b1a5;
 }
+nav ul {
+  width: 100%;
+}
 nav ul li {
   display: inline-block;
   margin: 5px 20px;
@@ -51,28 +59,36 @@ nav ul li a {
   text-decoration: none;
   color: inherit;
 }
+nav .right {
+  margin: auto auto;
+  align-items: center;
+}
+.right a {
+  float: right;
+}
 .name-large {
-  font-size: 80px;
+  font-size: 5vw;
   line-height: 1em;
 }
 .matter {
   margin: 1em 10em;
 }
 
-.me {
-  display: grid;
-  grid-template-columns: 10fr 2fr;
-}
-
 .large-text {
   padding: 0.5em 5em;
+  width: 85%;
+  margin: auto auto;
 }
 .large-text #about {
   text-align: center;
   padding: 5px 30px;
 }
-.right-arrow-area {
-  position: relative;
+.right.arrow-area {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  bottom: 0;
+  display: block;
 }
 .arrow-circle {
   width: 70px;
@@ -105,7 +121,8 @@ nav ul li a {
   display: grid;
 }
 .bottom #skills ul {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0.5em;
 }
 .bottom #contact ul {
   grid-template-columns: 6em 2em 10em;
@@ -116,9 +133,7 @@ nav ul li a {
   background: #fff;
   border-radius: 1px;
 }
-#contact .set.address {
-  font-size: 25px;
-}
+
 .btn {
   background: inherit;
   padding: 0.5em 1em;
@@ -146,10 +161,7 @@ nav ul li a {
 .right-arrow {
   position: relative;
 }
-.works .btn-arrow {
-  position: absolute;
-  top: 40%;
-  font-size: 1.5vw;
+.btn-arrow {
   border: none;
 }
 .btn-arrow:focus {
@@ -166,17 +178,12 @@ nav ul li a {
   padding: 0.5em 3em;
   margin-top: 5vh;
 }
+
 .work img {
   width: 100%;
   height: 100%;
 }
-.work .desc .project-name {
-  font-size: 2vw;
-}
-.work .desc {
-  font-size: 1.2vw;
-  vertical-align: middle;
-}
+
 .btn-group {
   width: 60%;
   margin: 0 auto;
@@ -207,4 +214,69 @@ footer ul li {
 footer i {
   color: #fff;
   margin: 5px;
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 1vw;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  h3 {
+    font-size: 1.5vw;
+  }
+  #contact .set.address {
+    font-size: 1.3vw;
+  }
+  .works .btn-arrow {
+    position: absolute;
+    top: 40%;
+    font-size: 1.5vw;
+  }
+  .work .desc .project-name {
+    font-size: 2vw;
+  }
+  .work .desc {
+    font-size: 1.2vw;
+    vertical-align: middle;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 1em;
+  }
+  nav ul,
+  .worksPage header,
+  .worksPage footer,
+  .right.arrow-area {
+    display: none;
+  }
+  .matter {
+    margin: 0.5em auto;
+  }
+  .name-large {
+    font-size: 35px;
+  }
+  .large-text {
+    width: 100%;
+    padding: 0;
+  }
+  .bottom {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .bottom > * {
+    width: 80%;
+  }
+  .works .work {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .btn-primary {
+    border: 2px solid #97b1a5;
+    font-size: 14px;
+    padding: 0.2em;
+  }
+  footer {
+    position: static;
+  }
 }
