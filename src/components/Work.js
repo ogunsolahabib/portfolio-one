@@ -18,7 +18,8 @@ class Work extends React.Component {
             <h3 className="project-name">{this.props.index.name}</h3>
             <p>{this.props.index.description}</p>
             <div className="btn-group">
-              <div className="btn-in">
+              <div>
+                <div className="btn-in">
                 <a
                   href={this.props.index.repository}
                   target="_blank"
@@ -36,7 +37,9 @@ class Work extends React.Component {
                   <button className="btn btn-primary">Live Website</button>
                 </a>
               </div>
-            </div>
+           
+              </div>
+               </div>
           </div>
         </div>
       );

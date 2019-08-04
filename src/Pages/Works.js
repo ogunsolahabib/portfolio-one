@@ -9,17 +9,27 @@ class Works extends React.Component {
   };
   prev() {
     this.setState(prevState => {
-      return {index: prevState.index > 0 ? this.state.index - 1 : 0};
+      if(this.state.index===0){
+        this.setState({index: this.state.worksDB.length-1})
+      } else{
+        return {index: prevState.index > 0 ? this.state.index - 1 : 0};
+      }
+      
     });
   }
   next() {
     this.setState(prevState => {
-      return {
+      if(this.state.index ===this.state.worksDB.length - 1){
+        this.setState({index: 0})
+      }else{
+         return {
         index:
           prevState.index < this.state.worksDB.length - 1
             ? this.state.index + 1
             : this.state.worksDB.length - 1
       };
+      }
+     
     });
   }
   componentDidMount() {
@@ -66,13 +76,13 @@ class Works extends React.Component {
         <Header />
         <div className="matter">
           <div className="works">
-            <div className="left-btn">
+            <div className="dir-btn left-btn">
               <button onClick={this.prev.bind(this)} className="btn btn-arrow">
                 <i className="fas fa-chevron-left" />
               </button>
             </div>
             <Work index={this.state.worksDB[this.state.index]} />
-            <div className="right-btn">
+            <div className="dir-btn right-btn">
               <button onClick={this.next.bind(this)} className="btn btn-arrow">
                 <i className="fas fa-chevron-right" />
               </button>

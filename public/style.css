@@ -16,7 +16,7 @@ body {
   font-size: 50px;
   vertical-align: middle;
   text-align: center;
-  font-family: "Sniglet";
+  font-family: "Leckerli one";
 }
 h1,
 h3 {
@@ -149,7 +149,7 @@ nav .right {
 }
 .btn-primary {
   border: 2px solid #97b1a5;
-  width: 10em;
+  width: 9em;
 }
 .works {
   display: grid;
@@ -185,14 +185,17 @@ nav .right {
 }
 
 .btn-group {
-  width: 60%;
   margin: 0 auto;
-  margin-top: auto;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
 }
-.btn-group > * {
+.btn-in {
   display: inline-block;
-  margin: 1em 0.5em;
+  margin: 0.5em;
 }
+
 
 footer {
   position: absolute;
@@ -239,10 +242,16 @@ footer i {
     font-size: 1.2vw;
     vertical-align: middle;
   }
+  .mobile-works{
+    display: none;
+  }
 }
 @media only screen and (max-width: 768px) {
   body {
-    padding: 0 1em;
+    padding: 0 2em;
+  }
+  nav.main-nav{
+    grid-template-columns: 40% 20% 40%;
   }
   nav ul,
   .worksPage header,
@@ -250,7 +259,7 @@ footer i {
   .right.arrow-area {
     display: none;
   }
-  .matter {
+  .matter, .worksPage {
     margin: 0.5em auto;
   }
   .name-large {
@@ -263,20 +272,120 @@ footer i {
   .bottom {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
+   
   }
   .bottom > * {
-    width: 80%;
+    width: 90%;
+    padding: 1vw;
   }
+  .mobile-works{
+    margin-top: 50px;
+  }
+  
   .works .work {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
   }
   .btn-primary {
     border: 2px solid #97b1a5;
-    font-size: 14px;
+    font-size: 14px !important;
     padding: 0.2em;
+    width: 8em;
+  }
+  .btn-group > * {
+    margin: 0.2em;
+  }
+  .mobile-works h3{
+    font-size: 23px;
+    text-align: center;
+  }
+  .mobile-works img{
+    width: 350px;
+    height: auto;
+    margin: auto;
+  }
+  .mobile-works .worksPage{
+    margin: auto auto;
+  }
+  .dir-btn{
+    position: relative;
+    
+  }
+  .dir-btn button{
+    position: absolute;
+    top: 5em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 40px;
+    font-size: 25px;
   }
   footer {
     position: static;
+    margin-top: 2em;
+  }
+}
+@media only screen and (max-width: 425px){
+  body {
+    padding: 0 1em;
+    font-size: 14px;
+  }
+  
+  .matter, .worksPage {
+    margin: 0.3em auto;
+  }
+  
+  
+  .bottom {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+   
+  }
+  .bottom #contact ul{
+    grid-template-columns: 30% 5% 55%;
+  }
+  
+  
+  .works {
+    grid-gap: 0;
+    padding:0;
+  }
+  
+  .btn-group .btn-in {
+    display: block;
+  }
+  .btn-in .btn {
+    width: 8em;
+    height: 2em;
+  }
+  .mobile-works h3{
+    font-size: 23px;
+    text-align: center;
+  }
+  .mobile-works img{
+    width: 100%;
+    height: auto;
+    
+  }
+  .mobile-works button{
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .mobile-works .worksPage{
+    margin: auto auto;
+  }
+  .dir-btn{
+    position: relative;
+    
+  }
+  .dir-btn button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 25px;
   }
 }

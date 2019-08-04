@@ -42,10 +42,11 @@ const Me = props => {
                 <h3>Contact</h3>
                 <ul>
                   <div className="set social">
-                    <li>Github</li>
-                    <li>Codepen</li>
-                    <li>Linkedin</li>
-                    <li>Twitter</li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/ogunsolahabib">Github</a>
+                    </li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.com/ogunsolahabib">Codepen</a></li>
+                    <li> <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ogunsolahabib">Linkedin</a></li>
+                    <li> <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ogunsolahabib">Twitter</a></li>
                   </div>
                   <div className="v-line" />
                   <div className="set address">
@@ -63,6 +64,7 @@ const Me = props => {
           </div>
         </div>
         <div className="mobile-works">
+          <h3>My Works</h3>
           <Works />
         </div>
       </div>
