@@ -28,5 +28,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "My Portfolio Website",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogunsolahabib/portfolio-one.git"
+  },
+  "author": "Habib Ogunsola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogunsolahabib/portfolio-one/issues"
+  },
+  "homepage": "https://github.com/ogunsolahabib/portfolio-one#readme"
 }

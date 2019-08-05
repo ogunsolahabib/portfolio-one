@@ -67,7 +67,7 @@ nav .right {
   float: right;
 }
 .name-large {
-  font-size: 5vw;
+  font-size: 50px;
   line-height: 1em;
 }
 .matter {
@@ -220,12 +220,12 @@ footer i {
 }
 @media only screen and (min-width: 1024px) {
   body {
-    font-size: 1vw;
+    font-size: 17px;
     max-height: 100vh;
     overflow: hidden;
   }
   h3 {
-    font-size: 1.5vw;
+    font-size: 20px;
   }
   #contact .set.address {
     font-size: 1.3vw;
@@ -233,20 +233,20 @@ footer i {
   .works .btn-arrow {
     position: absolute;
     top: 40%;
-    font-size: 1.5vw;
+    font-size: 25px;
   }
   .work .desc .project-name {
-    font-size: 2vw;
+    font-size: 25px;
   }
   .work .desc {
-    font-size: 1.2vw;
+    font-size: 19px;
     vertical-align: middle;
   }
   .mobile-works{
     display: none;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   body {
     padding: 0 2em;
   }
