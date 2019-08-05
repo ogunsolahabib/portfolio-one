@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html, body{
+  height: 100%;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -71,7 +74,17 @@ nav .right {
   line-height: 1em;
 }
 .matter {
-  margin: 1em 10em;
+  margin-left: 10em;
+  margin-right: 10em;
+  min-height: 100%;
+  margin-bottom: -40px;
+}
+.matter:after{
+  content:"";
+  display: block;
+}
+footer, .matter:after{
+  height: 40px;
 }
 
 .large-text {
@@ -196,8 +209,11 @@ nav .right {
   margin: 0.5em;
 }
 
+footer{
+  margin-top: 7em;
+}
 
-footer {
+footer > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
@@ -208,6 +224,7 @@ footer ul {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
+  line-height: 100%;
 }
 footer ul li {
   display: inline-block;

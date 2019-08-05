@@ -2,7 +2,8 @@ import React from "react";
 const Footer = props => {
   return (
     <footer>
-      <p>&copy; 2019 Habib Ogunsola</p>
+      <div>
+        <p>&copy; 2019 Habib Ogunsola</p>
       <ul>
         <li>
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/ogunsolahabib">
@@ -35,7 +36,9 @@ const Footer = props => {
           </a>
         </li>
       </ul>
-    </footer>
+    
+      </div>
+      </footer>
   );
 };
 export default Footer;
