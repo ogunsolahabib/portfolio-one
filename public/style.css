@@ -75,8 +75,8 @@ nav .right {
 }
 
 .large-text {
-  padding: 0.5em 5em;
-  width: 85%;
+  padding: 0.5em 3em;
+  width: 100%;
   margin: auto auto;
 }
 .large-text #about {
@@ -198,8 +198,6 @@ nav .right {
 
 
 footer {
-  position: absolute;
-  bottom: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
@@ -220,7 +218,7 @@ footer i {
 }
 @media only screen and (min-width: 1024px) {
   body {
-    font-size: 17px;
+    font-size: 16px;
     max-height: 100vh;
     overflow: hidden;
   }
@@ -300,8 +298,9 @@ footer i {
     text-align: center;
   }
   .mobile-works img{
-    width: 350px;
-    height: auto;
+    display: block;
+    width: auto;
+    height: 300px;
     margin: auto;
   }
   .mobile-works .worksPage{
@@ -325,7 +324,7 @@ footer i {
     margin-top: 2em;
   }
 }
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 500px){
   body {
     padding: 0 1em;
     font-size: 14px;
@@ -363,6 +362,7 @@ footer i {
     text-align: center;
   }
   .mobile-works img{
+    display: inline-block;
     width: 100%;
     height: auto;
     
