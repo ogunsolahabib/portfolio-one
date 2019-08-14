@@ -2,35 +2,41 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Work from "../components/Work";
+import Loader from "../components/Loader";
+import NA from "../components/NA";
 class Works extends React.Component {
   state = {
     index: 0,
+    isLoading: false,
     worksDB: []
   };
   prev() {
     this.setState(prevState => {
-      if(this.state.index===0){
-        this.setState({index: this.state.worksDB.length-1})
-      } else{
-        return {index: prevState.index > 0 ? this.state.index - 1 : 0};
+      if (this.state.index === 0) {
+        this.setState({ index: this.state.worksDB.length - 1 });
+      } else {
+        return { index: prevState.index > 0 ? this.state.index - 1 : 0 };
       }
-      
     });
   }
   next() {
     this.setState(prevState => {
-      if(this.state.index ===this.state.worksDB.length - 1){
-        this.setState({index: 0})
-      }else{
-         return {
-        index:
-          prevState.index < this.state.worksDB.length - 1
-            ? this.state.index + 1
-            : this.state.worksDB.length - 1
-      };
+      if (this.state.index === this.state.worksDB.length - 1) {
+        this.setState({ index: 0, isLoading: false });
+      } else {
+        return {
+          index:
+            prevState.index < this.state.worksDB.length - 1
+              ? this.state.index + 1
+              : this.state.worksDB.length - 1
+        };
       }
-     
     });
+  }
+  componentDidUpdate(prevState) {
+    if (prevState.index !== this.state.index && this.state.index.image) {
+      this.setState({ isLoading: true });
+    }
   }
   componentDidMount() {
     this.setState({
@@ -81,13 +87,20 @@ class Works extends React.Component {
                 <i className="fas fa-chevron-left" />
               </button>
             </div>
-            <Work index={this.state.worksDB[this.state.index]} />
+
+            {this.state.isLoading ? (
+              <Loader />
+            ) : (
+              <Work index={this.state.worksDB[this.state.index]} />
+            )}
+
             <div className="dir-btn right-btn">
               <button onClick={this.next.bind(this)} className="btn btn-arrow">
                 <i className="fas fa-chevron-right" />
               </button>
             </div>
           </div>
+          <NA />
         </div>
         <Footer />
       </div>
