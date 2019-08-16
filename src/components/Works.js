@@ -1,10 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 import Work from "../components/Work";
 import Loader from "../components/Loader";
-import NA from "../components/NA";
-class Works extends React.Component {
+class WorksPage extends React.Component {
   state = {
     index: 0,
     isLoading: false,
@@ -78,33 +76,26 @@ class Works extends React.Component {
   }
   render() {
     return (
-      <div className="worksPage">
-        <Header />
-        <div className="matter">
-          <div className="works">
-            <div className="dir-btn left-btn">
-              <button onClick={this.prev.bind(this)} className="btn btn-arrow">
-                <i className="fas fa-chevron-left" />
-              </button>
-            </div>
-
-            {this.state.isLoading ? (
-              <Loader />
-            ) : (
-              <Work index={this.state.worksDB[this.state.index]} />
-            )}
-
-            <div className="dir-btn right-btn">
-              <button onClick={this.next.bind(this)} className="btn btn-arrow">
-                <i className="fas fa-chevron-right" />
-              </button>
-            </div>
-          </div>
-          <NA />
+      <div className="works">
+        <div className="dir-btn left-btn">
+          <button onClick={this.prev.bind(this)} className="btn btn-arrow">
+            <i className="fas fa-chevron-left" />
+          </button>
         </div>
-        <Footer />
+
+        {this.state.isLoading ? (
+          <Loader />
+        ) : (
+          <Work index={this.state.worksDB[this.state.index]} />
+        )}
+
+        <div className="dir-btn right-btn">
+          <button onClick={this.next.bind(this)} className="btn btn-arrow">
+            <i className="fas fa-chevron-right" />
+          </button>
+        </div>
       </div>
     );
   }
 }
-export default Works;
+export default WorksPage;

@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Works from "./Works";
-import {Link} from "react-router-dom";
+import Works from "../components/Works";
+import { Link } from "react-router-dom";
 
 const Me = props => {
   return (
@@ -16,7 +16,7 @@ const Me = props => {
               <p>
                 I'm a creative and passionate Front-end Web Developer and UI/UX
                 Design enthusiast based in Lagos, Nigeria.
-                <br />I like learning about tech, teaching maths, and playing
+                <br />I like learning about tech, teaching maths, playing
                 football and video games.
               </p>
             </div>
@@ -42,11 +42,44 @@ const Me = props => {
                 <h3>Contact</h3>
                 <ul>
                   <div className="set social">
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/ogunsolahabib">Github</a>
+                    <li>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/ogunsolahabib"
+                      >
+                        Github
+                      </a>
                     </li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://codepen.com/ogunsolahabib">Codepen</a></li>
-                    <li> <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ogunsolahabib">Linkedin</a></li>
-                    <li> <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/ogunsolahabib">Twitter</a></li>
+                    <li>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://codepen.com/ogunsolahabib"
+                      >
+                        Codepen
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://twitter.com/ogunsolahabib"
+                      >
+                        Linkedin
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://twitter.com/ogunsolahabib"
+                      >
+                        Twitter
+                      </a>
+                    </li>
                   </div>
                   <div className="v-line" />
                   <div className="set address">
