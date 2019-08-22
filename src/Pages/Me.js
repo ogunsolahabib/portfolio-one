@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Works from "../components/Works";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Me = props => {
   return (
@@ -85,16 +85,19 @@ const Me = props => {
                   <div className="set address">
                     <li>+2348182141620</li>
                     <li>ogunsolahabib@yahoo.com</li>
+                    <li>
+                      <Link to="/works">
+                        <button className="btn btn-primary btn-to-works">
+                          MY WORKS
+                        </button>
+                      </Link>
+                    </li>
                   </div>
                 </ul>
               </div>
             </div>
           </div>
-          <div className="right arrow-area">
-            <Link to="/works" className="arrow-circle">
-              <i className="fas fa-long-arrow-alt-right" />
-            </Link>
-          </div>
+          <div className="right arrow-area" />
         </div>
         <div className="mobile-works">
           <h3>My Works</h3>

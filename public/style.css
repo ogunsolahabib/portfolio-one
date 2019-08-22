@@ -105,23 +105,16 @@ footer,
   bottom: 0;
   display: block;
 }
-.arrow-circle {
-  width: 70px;
-  height: 70px;
-  color: #97b1a5;
-  font-size: 4vw;
-  text-align: center;
-  padding: 5px;
-  position: absolute;
-  top: 50%;
-  animation: blink 0.5s infinite;
+.btn-to-works {
+  margin-top: 1em;
+  animation: blink 7s infinite;
 }
 @keyframes blink {
   0% {
-    color: #97b1a5;
+    border: 1px solid #97b1a5;
   }
   100% {
-    color: #eedcba;
+    border: 1px solid #eedcba;
   }
 }
 
@@ -178,7 +171,8 @@ footer,
 .right-arrow {
   position: relative;
 }
-.btn-arrow {
+.btn-arrow,
+.btn-arrow:hover {
   border: none;
 }
 .btn-arrow:focus {
@@ -327,8 +321,6 @@ footer i {
 @media only screen and (min-width: 1024px) {
   body {
     font-size: 16px;
-    max-height: 100vh;
-    overflow: hidden;
   }
   h3 {
     font-size: 20px;
