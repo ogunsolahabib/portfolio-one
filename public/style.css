@@ -1,9 +1,9 @@
 * {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
-html,
-body {
+html {
   height: 100%;
+  font-size: 62.5%;
 }
 a {
   text-decoration: none;
@@ -14,10 +14,11 @@ body {
   background: #12171d;
   color: #fff;
   font-size: 16px;
+  box-sizing: border-box;
 }
 .brand-logo h1 {
   color: #97b1a5;
-  font-size: 50px;
+  font-size: 5rem;
   vertical-align: middle;
   text-align: center;
   font-family: "Leckerli one";
@@ -50,14 +51,14 @@ nav .nav-links {
   align-items: center;
 }
 .nav-links .active {
-  border-bottom: 5px solid #97b1a5;
+  border-bottom: 0.5rem solid #97b1a5;
 }
 nav ul {
   width: 100%;
 }
 nav ul li {
   display: inline-block;
-  margin: 5px 20px;
+  margin: 0.5rem 2rem;
 }
 nav ul li a {
   text-decoration: none;
@@ -71,32 +72,37 @@ nav .right {
   float: right;
 }
 .name-large {
-  font-size: 50px;
-  line-height: 1em;
+  font-size: 5rem;
+  line-height: 1rem;
 }
 .matter {
   margin-left: 10em;
   margin-right: 10em;
   min-height: 100%;
-  margin-bottom: -40px;
+  margin-bottom: -4rem;
 }
 .matter:after {
   content: "";
   display: block;
 }
+/* .image {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+} */
 footer,
 .matter:after {
-  height: 40px;
+  height: 4rem;
 }
 
 .large-text {
-  padding: 0.5em 3em;
+  padding: 0.5rem 3rem;
   width: 100%;
   margin: auto auto;
 }
 .large-text #about {
   text-align: center;
-  padding: 5px 30px;
+  padding: 0.5rem 3rem;
 }
 .right.arrow-area {
   position: absolute;
@@ -106,7 +112,7 @@ footer,
   display: block;
 }
 .btn-to-works {
-  margin-top: 1em;
+  margin-top: 1rem;
   animation: blink 7s infinite;
 }
 @keyframes blink {
@@ -132,21 +138,21 @@ footer,
 }
 .bottom #skills ul {
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 0.5em;
+  grid-column-gap: 0.5rem;
 }
 .bottom #contact ul {
   grid-template-columns: 6em 2em 10em;
 }
 .v-line {
   width: 2px;
-  height: 7em;
+  height: 7rem;
   background: #fff;
   border-radius: 1px;
 }
 
 .btn {
   background: inherit;
-  padding: 0.5em 1em;
+  padding: 0.5rem 1rem;
   font-family: inherit;
   cursor: pointer;
   color: #97b1a5;
@@ -159,18 +165,17 @@ footer,
 }
 .btn-primary {
   border: 2px solid #97b1a5;
-  width: 9em;
 }
 .works {
-  display: grid;
-  grid-template-columns: 10% 80% 10%;
-  grid-gap: 1em;
-  padding: 0 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 3rem;
 }
-.left-arrow,
-.right-arrow {
-  position: relative;
+.works > * {
+  margin: 0 3rem;
 }
+
 .btn-arrow,
 .btn-arrow:hover {
   border: none;
@@ -183,16 +188,19 @@ footer,
 }
 
 .works .work {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-column-gap: 3em;
-  padding: 0.5em 3em;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 3rem;
   margin-top: 5vh;
+  align-items: center;
+}
+.work > * {
+  margin: 2rem;
 }
 
 .work img {
   width: 100%;
-  height: 100%;
+  object-fit: cover;
 }
 
 .btn-group {
@@ -204,13 +212,16 @@ footer,
 }
 .btn-in {
   display: inline-block;
-  margin: 0.5em;
+  margin: 0.5rem;
+}
+.dir-btn button {
+  font-size: 2.5rem;
 }
 .not-available {
   display: none;
 }
 footer {
-  margin-top: 7em;
+  margin-top: 7rem;
 }
 
 footer > div {
@@ -231,25 +242,30 @@ footer ul li {
 }
 footer i {
   color: #fff;
-  margin: 5px;
+  margin: 0.5rem;
 }
 @media only screen and (min-width: 1024px) {
   body {
     font-size: 16px;
   }
   h3 {
-    font-size: 20px;
+    font-size: 2rem;
   }
   #contact .set.address {
     font-size: 1.3vw;
   }
-  .works .btn-arrow {
-    position: absolute;
-    top: 40%;
-    font-size: 25px;
+  .works .dir-btn {
+    align-self: flex-start;
+    margin-top: 15%;
   }
+  .work img {
+    width: 35rem;
+    height: 40rem;
+    object-fit: cover;
+  }
+
   .work .desc .project-name {
-    font-size: 25px;
+    font-size: 2.5rem;
   }
   .work .desc {
     font-size: 19px;
@@ -267,16 +283,14 @@ footer i {
     grid-template-columns: 40% 20% 40%;
   }
   nav ul,
-  /* .worksPage header,
-  .worksPage footer, */
   .right.arrow-area {
     display: none;
   }
   .matter {
-    margin: 1em auto;
+    margin: 1rem auto;
   }
   .name-large {
-    font-size: 35px;
+    font-size: 3.5rem;
   }
   .large-text {
     width: 100%;
@@ -297,15 +311,17 @@ footer i {
     display: block;
 
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   .mobile-works {
-    margin-top: 50px;
+    margin-top: 5rem;
+  }
+  .works > * {
+    margin: 0 1rem;
   }
 
   .works .work {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    flex-direction: column;
   }
   .btn-primary {
     border: 2px solid #97b1a5;
@@ -324,42 +340,32 @@ footer i {
   .mobile-works img {
     display: block;
     width: auto;
-    height: 300px;
+    height: 30rem;
     margin: auto;
+    object-fit: cover;
   }
   .mobile-works .worksPage {
     margin: auto auto;
   }
   .dir-btn {
-    position: relative;
+    align-self: baseline;
+    margin-top: 35%;
   }
   .dir-btn button {
-    position: absolute;
-    top: 5em;
-    left: 0;
-    right: 0;
     margin: auto;
-    height: 40px;
-    font-size: 25px;
+    height: 4rem;
   }
-  /* footer {
-    position: static;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-top: auto;
-  } */
 }
 
 @media only screen and (max-width: 500px) {
   body {
-    padding: 0 1em;
+    padding: 0 1rem;
     font-size: 14px;
   }
 
   .matter,
   .worksPage {
-    margin: 0.3em auto;
+    margin: 0.3rem auto;
   }
 
   .bottom {
@@ -374,7 +380,6 @@ footer i {
   }
 
   .works {
-    grid-gap: 0;
     padding: 0;
   }
 
@@ -393,6 +398,7 @@ footer i {
     display: inline-block;
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
   .mobile-works button {
     display: block;
@@ -405,16 +411,8 @@ footer i {
   .mobile-works .not-available {
     display: none;
   }
-  .dir-btn {
-    position: relative;
-  }
+
   .dir-btn button {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     margin: auto;
-    font-size: 25px;
   }
 }
