@@ -1,5 +1,8 @@
 * {
   box-sizing: inherit;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 html {
   height: 100%;
@@ -13,8 +16,16 @@ body {
   font-family: "Secular One", sans-serif;
   background: #12171d;
   color: #fff;
-  font-size: 16px;
+  font-size: 1.6rem;
   box-sizing: border-box;
+  max-width: 100%;
+}
+header,
+.matter,
+footer {
+  width: 102.4rem;
+  padding: 6rem;
+  margin: 0 auto;
 }
 .brand-logo h1 {
   color: #97b1a5;
@@ -39,10 +50,6 @@ ul {
 li {
   margin: 0;
 }
-nav {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-}
 
 nav .nav-links {
   margin: 0 auto;
@@ -52,6 +59,11 @@ nav .nav-links {
 }
 .nav-links .active {
   border-bottom: 0.5rem solid #97b1a5;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 nav ul {
   width: 100%;
@@ -64,35 +76,20 @@ nav ul li a {
   text-decoration: none;
   color: inherit;
 }
-nav .right {
-  margin: auto auto;
-  align-items: center;
-}
+
 .right a {
   float: right;
 }
 .name-large {
-  font-size: 5rem;
-  line-height: 1rem;
+  font-size: 6rem;
 }
 .matter {
-  margin-left: 10em;
-  margin-right: 10em;
-  min-height: 100%;
-  margin-bottom: -4rem;
+  min-height: 60vh;
+  margin-bottom: 2rem;
 }
 .matter:after {
   content: "";
   display: block;
-}
-/* .image {
-  width: 100%;
-  height: 40rem;
-  object-fit: cover;
-} */
-footer,
-.matter:after {
-  height: 4rem;
 }
 
 .large-text {
@@ -100,51 +97,54 @@ footer,
   width: 100%;
   margin: auto auto;
 }
-.large-text #about {
+#about {
   text-align: center;
-  padding: 0.5rem 3rem;
+  margin-bottom: 5rem;
 }
-.right.arrow-area {
-  position: absolute;
-  right: 10%;
-  top: 0;
-  bottom: 0;
-  display: block;
+#about p {
+  font-size: 2rem;
+  margin: 4rem 0;
+}
+.image {
+  margin-bottom: 3rem;
+}
+.desc > * {
+  margin-bottom: 3rem;
 }
 .btn-to-works {
   margin-top: 1rem;
   animation: blink 7s infinite;
 }
-@keyframes blink {
-  0% {
-    border: 1px solid #97b1a5;
-  }
-  100% {
-    border: 1px solid #eedcba;
-  }
-}
 
 .bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
 }
 .bottom > * {
-  margin-right: auto;
-  margin-left: 2vw;
+  margin-bottom: 5rem;
 }
 
-.bottom > * ul {
-  display: grid;
+#skills ul,
+#contact > div {
+  display: flex;
 }
-.bottom #skills ul {
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 0.5rem;
+
+#skills ul {
+  flex-wrap: wrap;
 }
-.bottom #contact ul {
-  grid-template-columns: 6em 2em 10em;
+#skills li {
+  margin-right: 2rem;
 }
+#skills ul li {
+  flex: 1 0 21%;
+}
+
+#contact > div > * {
+  margin-right: 2rem;
+}
+
 .v-line {
-  width: 2px;
+  width: 2px !important;
   height: 7rem;
   background: #fff;
   border-radius: 1px;
@@ -170,7 +170,7 @@ footer,
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0 3rem;
+  padding: 0;
 }
 .works > * {
   margin: 0 3rem;
@@ -191,15 +191,13 @@ footer,
   display: flex;
   flex-direction: row;
   padding: 0.5rem 3rem;
-  margin-top: 5vh;
+  margin-top: 5rem;
   align-items: center;
-}
-.work > * {
-  margin: 2rem;
 }
 
 .work img {
-  width: 100%;
+  width: 18rem;
+  height: 18rem;
   object-fit: cover;
 }
 
@@ -220,20 +218,15 @@ footer,
 .not-available {
   display: none;
 }
-footer {
-  margin-top: 7rem;
-}
 
 footer > div {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
   width: 100%;
 }
 footer ul {
-  margin: 0 auto;
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   align-items: center;
   line-height: 100%;
 }
@@ -246,29 +239,27 @@ footer i {
 }
 @media only screen and (min-width: 1024px) {
   body {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   h3 {
     font-size: 2rem;
   }
   #contact .set.address {
-    font-size: 1.3vw;
+    font-size: 2rem;
+  }
+  #contact i {
+    display: inline;
   }
   .works .dir-btn {
     align-self: flex-start;
     margin-top: 15%;
-  }
-  .work img {
-    width: 35rem;
-    height: 40rem;
-    object-fit: cover;
   }
 
   .work .desc .project-name {
     font-size: 2.5rem;
   }
   .work .desc {
-    font-size: 19px;
+    font-size: 2rem;
     vertical-align: middle;
   }
   .mobile-works {
@@ -276,34 +267,19 @@ footer i {
   }
 }
 @media only screen and (max-width: 800px) {
-  body {
-    padding: 0 2em;
+  header,
+  .matter,
+  footer {
+    padding: 4rem;
   }
-  nav.main-nav {
-    grid-template-columns: 40% 20% 40%;
-  }
-  nav ul,
-  .right.arrow-area {
+
+  nav ul {
     display: none;
   }
   .matter {
     margin: 1rem auto;
   }
-  .name-large {
-    font-size: 3.5rem;
-  }
-  .large-text {
-    width: 100%;
-    padding: 0;
-  }
-  .bottom {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-  }
-  .bottom > * {
-    width: 90%;
-    padding: 1vw;
-  }
+
   .worksPage .matter .works {
     display: none;
   }
@@ -311,7 +287,7 @@ footer i {
     display: block;
 
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .mobile-works {
     margin-top: 5rem;
@@ -322,27 +298,25 @@ footer i {
 
   .works .work {
     flex-direction: column;
+    padding: 0.5rem;
   }
+
   .btn-primary {
     border: 2px solid #97b1a5;
-    font-size: 14px !important;
-    padding: 0.2em;
-    width: 8em;
+    font-size: 1.4rem !important;
+    padding: 0.2em 1rem;
   }
   .btn-group > * {
-    margin: 0.2em;
+    margin: 0.5rem;
   }
   .mobile-works h3 {
-    font-size: 23px;
+    font-size: 2.4rem;
     text-align: center;
   }
 
   .mobile-works img {
     display: block;
-    width: auto;
-    height: 30rem;
     margin: auto;
-    object-fit: cover;
   }
   .mobile-works .worksPage {
     margin: auto auto;
@@ -357,26 +331,20 @@ footer i {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   body {
-    padding: 0 1rem;
-    font-size: 14px;
+    font-size: 1.4rem;
   }
-
+  header,
   .matter,
-  .worksPage {
-    margin: 0.3rem auto;
+  footer {
+    padding: 2rem 1rem;
   }
-
+  #contact > div > * {
+    margin-right: 1rem;
+  }
   .bottom {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-  }
-  .bottom > * {
-    margin: 0 auto;
-  }
-  .bottom #contact ul {
-    grid-template-columns: 30% 5% 55%;
+    flex-direction: column;
   }
 
   .works {
@@ -391,15 +359,10 @@ footer i {
     height: 2em;
   }
   .mobile-works h3 {
-    font-size: 23px;
+    font-size: 2.4rem;
     text-align: center;
   }
-  .mobile-works img {
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+
   .mobile-works button {
     display: block;
     width: 100%;
