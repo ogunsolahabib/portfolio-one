@@ -63,7 +63,7 @@ const Me = (props) => {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://twitter.com/ogunsolahabib"
+                      href="https://www.linkedin.com/in/habib-ogunsola-92b79a15a/"
                     >
                       Linkedin
                     </a>
@@ -72,7 +72,7 @@ const Me = (props) => {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href="https://twitter.com/ogunsolahabib"
+                      href="https://twitter.com/habeeb_ogee"
                     >
                       Twitter
                     </a>
