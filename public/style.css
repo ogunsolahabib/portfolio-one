@@ -173,7 +173,7 @@ nav ul li a {
   padding: 0;
 }
 .works > * {
-  margin: 0 3rem;
+  margin: 0 1.5rem;
 }
 
 .btn-arrow,
@@ -190,9 +190,11 @@ nav ul li a {
 .works .work {
   display: flex;
   flex-direction: row;
-  padding: 0.5rem 3rem;
   margin-top: 5rem;
   align-items: center;
+}
+.work > * {
+  margin: 2rem;
 }
 
 .work img {
