@@ -5,15 +5,6 @@ import worksDb from "../worksDb.json";
 import Work from "../components/Work";
 
 const Me = (props) => {
-  const skills = [
-    { name: "HTML", icon: "fab fa-html5" },
-    { name: "CSS", icon: "fab fa-css3-alt" },
-    { name: "JavaScript", icon: "fab fa-js" },
-    { name: "React", icon: "fab fa-react" },
-    { name: "Git", icon: "fab fa-git" },
-    { name: "Figma", icon: "fab fa-figma" },
-  ];
-
   const socials = [
     {
       name: "Github",
