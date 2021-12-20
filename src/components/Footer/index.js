@@ -1,9 +1,11 @@
 import React from "react";
+import "./index.scss";
+
 const Footer = (props) => {
   return (
     <footer>
       <div>
-        <p>&copy; 2019 Habib Ogunsola</p>
+        <p>&copy; {new Date().getFullYear()} Habib Ogunsola</p>
         <ul>
           <li>
             <a

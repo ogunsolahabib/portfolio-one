@@ -1,0 +1,21 @@
+footer {
+  div {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+    li {
+      display: inline-block;
+      i {
+        color: #fff;
+        margin: 0.5rem;
+      }
+    }
+  }
+}
