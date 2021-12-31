@@ -42,8 +42,9 @@ const Me = (props) => {
             </h1>
             <div className="description">
               <p>
-                A creative Frontend Engineer and UX enthusiast with about{" "}
-                {new Date().getFullYear() - 2018} years experience in building
+                A creative Frontend Engineer and UX enthusiast with{" "}
+                {new Date().getMonth() > 3 ? "over" : "about"}{" "}
+                {new Date().getFullYear() - 2019} years experience in building
                 aesthetically pleasing large scale web applications.
               </p>
               <p>Interested in Tech, Business, Combat sports, and Football.</p>
@@ -51,7 +52,7 @@ const Me = (props) => {
               <p>
                 I am currently building User Interfaces with awesome people at{" "}
                 <a target="_blank" href="https://www.ebanqo.com/">
-                  eBanqo Inc
+                  eBanqo Inc.
                 </a>
               </p>
             </div>
