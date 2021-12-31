@@ -51,7 +51,11 @@ const Me = (props) => {
               <br></br>
               <p>
                 I am currently building User Interfaces with awesome people at{" "}
-                <a target="_blank" href="https://www.ebanqo.com/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.ebanqo.com/"
+                >
                   eBanqo Inc.
                 </a>
               </p>
