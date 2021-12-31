@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import worksDb from "../worksDb.json";
 import Work from "../components/Work";
+import Lottie from "react-lottie";
+import coderLottie from "../lotties/coder-lottie.json";
 
 const Me = (props) => {
   const socials = [
@@ -45,10 +47,29 @@ const Me = (props) => {
                 aesthetically pleasing large scale web applications.
               </p>
               <p>Interested in Tech, Business, Combat sports, and Football.</p>
+              <br></br>
+              <p>
+                I am currently building User Interfaces with awesome people at{" "}
+                <a target="_blank" href="https://www.ebanqo.com/">
+                  eBanqo Inc
+                </a>
+              </p>
             </div>
           </div>
           <div className="hero__image">
-            <img src="img/stack-icons.png" alt="skills" />
+            {/* <img src="img/stack-icons.png" alt="skills" /> */}
+            <Lottie
+              options={{
+                loop: true,
+                autoplay: true,
+                animationData: coderLottie,
+                rendererSettings: {
+                  preserveAspectRatio: "xMidYMid slice",
+                },
+              }}
+              width={400}
+              height={400}
+            />
           </div>
         </section>
         <section className="section bottom">

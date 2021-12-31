@@ -26,9 +26,9 @@ body {
 header,
 main,
 footer {
-  padding: 5vw;
+  padding: 3rem 5vw;
   @media only screen and (min-width: 1024px) {
-    padding: 6rem 15rem;
+    padding: 3rem 10vw;
   }
   margin: 0 auto;
 }
@@ -69,6 +69,9 @@ ul {
     .hero__about {
       font-weight: 700;
       width: 100%;
+      a {
+        text-decoration: underline;
+      }
     }
     .description {
       font-size: 2rem;
@@ -85,7 +88,7 @@ ul {
       flex-direction: row;
       .hero__about {
         max-width: 800px;
-        margin-right: 5rem;
+        margin-right: 5vw;
       }
     }
   }

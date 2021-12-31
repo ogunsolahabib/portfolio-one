@@ -61,7 +61,7 @@ const Footer = (props) => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://instagram.com/habeeb.og"
+              href="https://instagram.com/ha_beeeb_"
               title="Instagram"
             >
               <i className="fab fa-instagram" />

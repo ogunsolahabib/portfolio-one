@@ -4,8 +4,7 @@
       "name": "Tunez",
       "image": "img/Tunez.png",
       "description": "Frontend App to search songs, artists and albums from the iTunes API. I used TypeScript, React, Express, Jest.",
-      "repository": "https://github.com/ogunsolahabib/world-countries",
-      "liveWebsite": "https://ogunsolahabib.github.io/world-countries"
+      "repository": "https://github.com/ogunsolahabib/tunez"
     },
     {
       "name": "REST Countries",

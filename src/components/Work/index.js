@@ -20,15 +20,17 @@ const Work = ({ index }) => {
               <button className="btn btn-primary">Source Code</button>
             </a>
           </div>
-          <div className="btn-in">
-            <a
-              href={index.liveWebsite}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="btn btn-primary">Live Website</button>
-            </a>
-          </div>
+          {index.liveWebsite && (
+            <div className="btn-in">
+              <a
+                href={index.liveWebsite}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="btn btn-primary">Live Website</button>
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>
