@@ -7,7 +7,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-lottie": "^1.2.3",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.1",
     "sass": "^1.42.1"
   },
   "scripts": {
